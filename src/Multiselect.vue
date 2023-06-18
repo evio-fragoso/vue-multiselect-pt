@@ -101,7 +101,7 @@
             <slot name="beforeList"></slot>
             <li v-if="multiple && max === internalValue.length">
               <span class="multiselect__option">
-                <slot name="maxElements">Maximum of {{ max }} options selected. First remove a selected option to select another.</slot>
+                <slot name="maxElements">Maximo de {{ max }} Opções Selecionadas. Primeiro Remova uma Opção Selecionada para Selecionar Outra.</slot>
               </span>
             </li>
             <template v-if="!max || internalValue.length < max">
@@ -139,12 +139,12 @@
             </template>
             <li v-show="showNoResults && (filteredOptions.length === 0 && search && !loading)">
               <span class="multiselect__option">
-                <slot name="noResult" :search="search">No elements found. Consider changing the search query.</slot>
+                <slot name="noResult" :search="search">Nenhum Resultado Encontrado.</slot>
               </span>
             </li>
             <li v-show="showNoOptions && ((options.length === 0 || (hasOptionGroup === true && filteredOptions.length === 0)) && !search && !loading)">
               <span class="multiselect__option">
-                <slot name="noOptions">List is empty.</slot>
+                <slot name="noOptions">A Lista Está Vazia.</slot>
               </span>
             </li>
             <slot name="afterList"></slot>
